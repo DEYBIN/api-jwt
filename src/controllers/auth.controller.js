@@ -1,6 +1,6 @@
-import userSchema from '../models/User'
-import jwt from 'jsonwebtoken'
-import config from '../config'
+const userSchema= require('../models/User')
+const jwt= require('jsonwebtoken')
+const config= require('../config')
 export const signUp=async (req,res)=>{
 	try {
 		if(!req.body.passwordAgain) return res.json({statusCode:400,status:'error',message:'revisar datos enviados'});

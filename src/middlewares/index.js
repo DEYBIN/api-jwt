@@ -3,6 +3,6 @@
 
 // export { authJwt, verifySignup };
 
-import * as authJwt from "./authJwt";
+const {...authJwt}= require("./authJwt")
 
 export { authJwt };

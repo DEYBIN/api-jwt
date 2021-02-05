@@ -1,7 +1,7 @@
-import {Router} from 'express';
+const {Router}= require('express')
 const router = Router();
-import * as userCtrl from '../controllers/auth.controller';
-import { authJwt } from '../middlewares/index';
+const {...userCtrl}=require('../controllers/auth.controller')
+const { authJwt }= require('../middlewares/index')
 router.post('/singUp',userCtrl.signUp);
 router.post('/singIn',userCtrl.signIn);
 router.post('/register',authJwt.verifyToken,userCtrl.register)

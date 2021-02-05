@@ -1,6 +1,6 @@
-import carsSchema from '../models/Cars'
-import jwt from 'jsonwebtoken'
-import config from '../config'
+const carsSchema = require( '../models/Cars')
+const jwt = require( 'jsonwebtoken')
+const config = require( '../config')
 export const cars=async (req,res)=>{
 	try {
 		const data= await carsSchema.find();

@@ -1,6 +1,6 @@
-import jwt from "jsonwebtoken";
-import config from "../config";
-import userSchema from "../models/User";
+const jwt= require("jsonwebtoken")
+const config= require("../config")
+const userSchema= require("../models/User")
 
 
 export const verifyToken = async (req, res, next) => {

@@ -1,4 +1,4 @@
-import {Schema,model} from 'mongoose'
+const {Schema,model}= require('mongoose')
 
 const rolesSchema =new Schema({
 	name:String

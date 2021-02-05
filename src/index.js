@@ -1,4 +1,4 @@
-import app from './app'
-import  './database'
+const app = require('./app')
+require('./database')
 app.listen(app.get('port'));
 console.log('Server on PORT '+app.get('port'))

@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+const mongoose = require('mongoose')
 const URI = process.env.DB_MONGODB_URI?process.env.DB_MONGODB_URI:'mongodb://localhost/api-db'
 mongoose.connect(URI,{
 	useNewUrlParser: true,
