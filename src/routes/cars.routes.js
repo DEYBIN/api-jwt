@@ -1,0 +1,10 @@
+import {Router} from 'express';
+const router = Router();
+import * as carsControl from '../controllers/cars.controller';
+import { authJwt } from '../middlewares/index';
+router.get('/',authJwt.verifyToken,carsControl.cars);
+router.get('/:id',authJwt.verifyToken,carsControl.car);
+router.post('/register',authJwt.verifyToken,carsControl.register);
+router.put('/update/:id',authJwt.verifyToken,carsControl.update);
+router.delete('/register',authJwt.verifyToken,carsControl.deletes);
+export default router;
