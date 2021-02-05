@@ -6,6 +6,6 @@ var _app = _interopRequireDefault(require("./app"));
 
 require("./database");
 
-_app["default"].listen(3000);
+_app["default"].listen(_app["default"].get('port'));
 
-console.log('Server on PORT 3000');
+console.log('Server on PORT ' + _app["default"].get('port'));
