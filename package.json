@@ -3,8 +3,13 @@
   "version": "1.0.0",
   "description": "resp api para transporte",
   "main": "index.js",
+  "engines": {
+    "node":"10.23.2"
+  },
   "scripts": {
-    
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src --out-dir build",
+    "dev": "nodemon src/index.js --exec babel-node",
     "start": "node build/index.js"
   },
   "author": "Deybin Yoni Gil Perez",
