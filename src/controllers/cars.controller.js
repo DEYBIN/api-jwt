@@ -1,7 +1,8 @@
 const carsSchema = require( '../models/Cars')
 const jwt = require( 'jsonwebtoken')
 const config = require( '../config')
-export const cars=async (req,res)=>{
+const carControl={}
+carControl.cars=async (req,res)=>{
 	try {
 		const data= await carsSchema.find();
 		if(!data) data=[];
@@ -11,7 +12,7 @@ export const cars=async (req,res)=>{
 	}
 }
 
-export const car=async (req,res)=>{
+carControl.car=async (req,res)=>{
 	try {
 		console.log(req.params.id)
 		const data= await carsSchema.findById(req.params.id);
@@ -23,7 +24,7 @@ export const car=async (req,res)=>{
 }
 
 
-export const register=async (req,res)=>{
+carControl.register=async (req,res)=>{
 	try {
 
 		let token = req.headers["x-access-token"];
@@ -51,7 +52,7 @@ export const register=async (req,res)=>{
 
 }
 
-export const update=async (req,res)=>{
+carControl.update=async (req,res)=>{
 	try {
 
 		let token = req.headers["x-access-token"];
@@ -72,7 +73,7 @@ export const update=async (req,res)=>{
 
 }
 
-export const deletes =async (req,res)=>{
+carControl.deletes =async (req,res)=>{
 	try {
 
 		// let token = req.headers["x-access-token"];
@@ -93,3 +94,5 @@ export const deletes =async (req,res)=>{
 		
 
 }
+
+module.exports=carControl;

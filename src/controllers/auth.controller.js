@@ -1,7 +1,8 @@
 const userSchema= require('../models/User')
 const jwt= require('jsonwebtoken')
 const config= require('../config')
-export const signUp=async (req,res)=>{
+const authControl={}
+authControl.signUp=async (req,res)=>{
 	try {
 		if(!req.body.passwordAgain) return res.json({statusCode:400,status:'error',message:'revisar datos enviados'});
 
@@ -25,7 +26,7 @@ export const signUp=async (req,res)=>{
 		return res.json({statusCode:400,status:'error',message:error});
 	}
 }
-export const signIn=async (req,res)=>{
+authControl.signIn=async (req,res)=>{
 	try {
 		const {email,password}= req.body;
 		const userFound = await userSchema.findOne({email});
@@ -43,7 +44,7 @@ export const signIn=async (req,res)=>{
 	}
 }
 
-export const register=async (req,res)=>{
+authControl.register=async (req,res)=>{
 	try {
 
 		let token = req.headers["x-access-token"];
@@ -64,3 +65,5 @@ export const register=async (req,res)=>{
 		
 
 }
+
+module.exports=authControl;

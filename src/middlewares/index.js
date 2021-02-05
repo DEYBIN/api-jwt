@@ -3,6 +3,6 @@
 
 // export { authJwt, verifySignup };
 
-const {...authJwt}= require("./authJwt")
+// const {...authJwt}= require("./authJwt")
 
-export { authJwt };
+// module.exports=authJwt;

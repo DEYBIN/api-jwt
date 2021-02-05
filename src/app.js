@@ -54,4 +54,4 @@ app.get("/", (req, res) => {
 // Routes
 app.use('/auth',authRoutes);
 app.use('/cars',carsRoutes);
-export default app;
+module.exports=app;

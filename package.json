@@ -7,8 +7,8 @@
     "node": "10.23.2"
   },
   "scripts": {   
-    "dev": "node build/index.js",
-    "start": "node build/index.js"
+    "dev": "node src/index.js",
+    "start": "node src/index.js"
   },
   "author": "Deybin Yoni Gil Perez",
   "license": "ISC",

@@ -7,4 +7,4 @@ const rolesSchema =new Schema({
 	versionKey:false
 })
 
-export default model('Role',rolesSchema)
+module.exports =model('Role',rolesSchema)

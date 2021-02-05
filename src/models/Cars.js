@@ -21,4 +21,4 @@ const carSchema =new Schema({
 );
 
 
-export default model('Car',carSchema)
+module.exports =model('Car',carSchema)
